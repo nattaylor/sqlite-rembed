@@ -128,6 +128,10 @@ left join articles on articles.rowid = matches.rowid;
 
 Notice how "firearm courtroom" doesn't appear in any of these headlines, but it can still figure out that "Hunter Biden's gun trial" is related, and the other two justice-related articles appear on top.
 
+## Building
+
+To build the loadable extension, run `make loadable`
+
 ## Drawbacks
 
 1. **No batch support yet.** If you use `rembed()` in a batch UPDATE or INSERT in 1,000 rows, then 1,000 HTTP requests will be made. Add a :+1: to [Issue #1](https://github.com/asg017/sqlite-rembed/issues/1) if you want to see this fixed.
